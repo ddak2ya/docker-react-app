@@ -1,0 +1,39 @@
+FROM node:alpine
+
+WORKDIR /usr/src/app
+
+COPY package.json ./
+
+RUN npm install
+
+#COPY ./ ./
+
+CMD ["npm","run", "start"]
+
+# docker build -f Dockerfile.dev -t ddak2ya/react_app .
+# docker run ddak2ya/react_app(이미지 이름)
+# docker run -it -p 3000:3000 ddak2ya/react_app
+
+# docker run -it -p 3000:3000 -v /usr/src/app/node_modules -v ${pwd}:/usr/src/app ddak2ya/react_app
+# docker-compose up --build
+# docker exec -it  463d0136d2d4 sh
+# FROM node:alpine
+
+WORKDIR /usr/src/app
+
+COPY package.json ./
+
+RUN npm install
+
+#COPY ./ ./
+
+CMD ["npm","run", "start"]
+
+# docker build -f Dockerfile.dev -t ddak2ya/react_app .
+# docker run ddak2ya/react_app(이미지 이름)
+# docker run -it -p 3000:3000 ddak2ya/react_app
+
+# docker run -it -p 3000:3000 -v /usr/src/app/node_modules -v ${pwd}:/usr/src/app ddak2ya/react_app
+# docker-compose up --build
+# docker exec -it  463d0136d2d4 sh
+# docker exec -it c1c1cb62ca3e redis-cli
