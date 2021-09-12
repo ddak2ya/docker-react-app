@@ -14,3 +14,18 @@ script:
 
 after_success:
   - echo "Test Success"
+
+deploy:
+  provider: elasticbeanstalk
+  region: "ap-northeast-2"
+  app: "react_app"
+  env: "Reactapp-env"
+  bucket_name: "elasticbeanstalk-ap-northeast-2-417083042103"
+  bucket_path: "react_app"
+  on:
+    bracnch: master
+access_key_id: $AWS_ACCESS_KEY
+secret_access_key: $AWS_SECRET_ACCESS_KEY
+
+#AKIAWCHAWFE33B37F7WA
+#NoFK3t90rMA9J1IJUWDqnrGGeJo0GYlake6eafuX
